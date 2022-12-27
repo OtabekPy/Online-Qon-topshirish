@@ -158,12 +158,12 @@ def profil_tahrirlash(request):
 
         try:
             rasm = request.FILES['rasm']
-            donor_profil.image = rasm
+            donor_profil.rasm = rasm
             donor_profil.save()
         except:
             pass
-        alert = True
-        return render(request, "profil_tahrirlash.html", {'alert': alert})
+        ogohlantirish = True
+        return render(request, "profil_tahrirlash.html", {'alert': ogohlantirish})
     return render(request, "profil_tahrirlash.html", {'donor_profil': donor_profil})
 
 
